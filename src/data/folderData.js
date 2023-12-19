@@ -1,4 +1,5 @@
 const folderData = {
+  //Remember this: This is Collection of nested objects not array of objects
   id: 1,
   name: "root",
   isFolder: true,
