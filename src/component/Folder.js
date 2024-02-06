@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import "./Folder.css";
-import { addNewNode } from "../hooks/insertNewNode";
 
 const Folder = ({ handleInsertNode = () => {}, explorer }) => {
   //   console.log("explorer", explorer);
@@ -21,7 +20,7 @@ const Folder = ({ handleInsertNode = () => {}, explorer }) => {
 
   const handleAddNewFolder = (e) => {
     if (e.key === "Enter" && e.target.value) {
-      console.log(e.target.value);
+      // console.log(e.target.value);
       handleInsertNode(explorer.id, e.target.value, isInput.isFolder);
       setIsInput({ visible: false });
     }
@@ -64,10 +63,6 @@ const Folder = ({ handleInsertNode = () => {}, explorer }) => {
             ))}
         </div>
       }
-
-      {/* {folderData.items.map((item) => {
-        return <div>{item.name}</div>;
-      })} */}
     </div>
   );
 };
